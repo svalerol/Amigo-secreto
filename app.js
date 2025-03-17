@@ -38,3 +38,18 @@ function actualizarLista() {
     }
 
 }
+
+// Función que selecciona un amigo y muestra el resultado en la pantalla
+
+function sortearAmigo () {
+    if (amigos.length === 0) {
+        alert ("No hay personas para iniciar el sorteo. Debes agregar un nombre primero");
+        return;
+    }
+
+    let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceAleatorio];
+
+    let resultado = document.getElementById ('resultado');
+    resultado.innerHTML = `El amigo ganador es: <strong> ${amigoSorteado}</strong>`;
+}
